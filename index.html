@@ -10,25 +10,25 @@
 </head>
 
 <body>
-
-    <div class="tools-container">
-        <div class="colors-container">
-            <span id="black">black</span>
-            <span id="blue">blue</span>
-            <span id="green">green</span>
-            <span id="orange">orange</span>
-            <span id="red">red</span>
+    <div class="canva-container">
+        <div class="tools-container">
+            <div class="colors-container">
+                <span id="black">black</span>
+                <span id="blue">blue</span>
+                <span id="green">green</span>
+                <span id="orange">orange</span>
+                <span id="red">red</span>
+            </div>
+            <div class="range-container">
+                <p>Width</p>
+                <input type="range" min="1" max="6" value="2">
+            </div>
         </div>
-        <div class="range-container">
-            <p>Width</p>
-            <input type="range" min="1" max="6">
+        <canvas></canvas>
+        <div class="erase-container">
+            <button>Erase</button>
         </div>
     </div>
-    <canvas></canvas>
-    <div class="erase-container">
-        <button>Erase</button>
-    </div>
-
     <script src='index.js'></script>
 </body>
 

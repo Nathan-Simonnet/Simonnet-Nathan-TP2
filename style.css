@@ -1,13 +1,22 @@
 body {
-    height: 100vh;
-    text-align: center;
+    min-height: 100vh;
+    width: 100%;
 
+    user-select: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.canva-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .tools-container {
@@ -88,8 +97,8 @@ body {
 
 canvas {
     border: 2px solid black;
-    width: 80%;
-    height: 60%;
+    width: 800px;
+    height: 600px;
 
     cursor: crosshair;
 }
@@ -99,7 +108,7 @@ canvas {
     justify-content: center;
     align-items: center;
 
-    height: 10%;
+    height: 100px;
     width: 80%;
     border: 2px solid red;
 }
