@@ -7,24 +7,6 @@ const erase = document.querySelector('button');
 let color = black
 let width = 2;
 
-spans.forEach((span) => {
-    span.addEventListener('click', (e) => {
-        color = span.id
-        console.log(color)
-        canvaHandler(color, width)
-    });
-});
-
-range.addEventListener('input', (e) => {
-    width = e.target.value
-    console.log(width)
-    canvaHandler(color, width)
-});
-
-
-erase.addEventListener('click', (e) => {
-    console.log("erase")
-});
 
 const canvaHandler = (color, width) => {
 
@@ -75,4 +57,20 @@ canvaHandler(color, width)
 
 
 
+spans.forEach((span) => {
+    span.addEventListener('click', (e) => {
+        color = span.id
+        console.log(color)
+        canvaHandler(color, width)
+    });
+});
 
+range.addEventListener('input', (e) => {
+    width = e.target.value
+    console.log(width)
+    canvaHandler(color, width)
+});
+
+erase.addEventListener('click', (e) => {
+    console.log("erase")
+});
