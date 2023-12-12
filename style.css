@@ -22,14 +22,14 @@ body {
 }
 
 .colors-container {
+    border: 1px solid purple;
+    height: 60%;
+    width: 80%;
 
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    border: 1px solid purple;
-    height: 60%;
-    width: 80%;
+    transition: 0.1s;
 
     & span {
         height: 60px;
@@ -41,6 +41,8 @@ body {
         cursor: pointer;
         background: rgba(128, 128, 128, 0.093);
         border-radius: 50%;
+        font-weight: bold;
+        color: white;
     }
 
     & #black {
@@ -62,8 +64,11 @@ body {
     & #red {
         background: red;
     }
-}
 
+    & span:hover {
+        transform: scale(1.1);
+    }
+}
 
 .range-container {
     display: flex;
@@ -85,8 +90,9 @@ canvas {
     border: 2px solid black;
     width: 80%;
     height: 60%;
-}
 
+    cursor: crosshair;
+}
 
 .erase-container {
     display: flex;
