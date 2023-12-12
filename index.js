@@ -14,6 +14,7 @@ let width = 2;
 
 const canvaHandler = (color, width, erase) => {
 
+
     canvas.height = 600;
     canvas.width = 800;
 
@@ -34,6 +35,7 @@ const canvaHandler = (color, width, erase) => {
         context.lineWidth = width;
 
         context.stroke();
+        context.lineCap = 'round';
 
         lastX = x;
         lastY = y;
@@ -43,7 +45,8 @@ const canvaHandler = (color, width, erase) => {
     canvas.addEventListener("mousedown", function (e) {
         lastX = e.clientX - canvas.offsetLeft + window.scrollX
         lastY = e.clientY - canvas.offsetTop + window.scrollY;
-
+        // console.log(canvas.offsetLeft)
+        // console.log(canvas.getBoundingClientRect().x)
         canvas.addEventListener("mousemove", mouseMoveHandler);
 
         canvas.addEventListener("mouseup", function () {
@@ -89,3 +92,8 @@ range.addEventListener('input', (e) => {
 erase.addEventListener('click', () => {
     canvaHandler(color, width, "doom!")
 });
+
+
+// canvas.addEventListener('mouseleave',() => {
+//     isdrawing = false
+// });
