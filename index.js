@@ -69,7 +69,12 @@ canvaHandler(color, width)
 
 spans.forEach((span) => {
     span.addEventListener('click', () => {
+
+        spans.forEach((s) => {
+            s.classList.remove("clicked")
+        });
         color = span.id
+        span.classList.add("clicked")
         console.log(color)
         canvaHandler(color, width)
     });
